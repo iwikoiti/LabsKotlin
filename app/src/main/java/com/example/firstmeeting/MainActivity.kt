@@ -62,6 +62,34 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnLab2.setOnClickListener{
+
+        }
+
+        btnLab3.setOnClickListener{
+            val suggestion = inputSuggestion.text.toString()
+            val symbol1 = inputSymbol1.text.toString()
+            val symbol2 = inputSymbol2.text.toString()
+
+            if (suggestion.isNotEmpty()){
+                if (symbol1.length != 1){
+                    showMessage(this, "Внимание!", "Введите один символ, который хотите заменить.");
+                    return@setOnClickListener
+                }
+                if (symbol2.length != 1){
+                    showMessage(this, "Внимание!", "Введите один символ, на который хотите заменить.");
+                    return@setOnClickListener
+                }
+            } else {
+                showMessage(this, "Внимание!", "Введите слово или предложение.");
+                return@setOnClickListener
+            }
+
+            val oldChar = symbol1[0]
+            val newChar = symbol2[0]
+            resultLab3.text = suggestion.replace(oldChar,newChar).toString()
+
+        }
     }
 
     fun showMessage(context: Context, title: String, message: String){ // базовый класс, который используется для вызова диалогового окна
