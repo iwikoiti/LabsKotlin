@@ -63,8 +63,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnLab2.setOnClickListener{
-
+            val n: Int
+            if (inputNValue.text.toString().isNotEmpty()){
+                 n = inputNValue.text.toString().toInt()
+            } else{
+                return@setOnClickListener
+            }
+            resultLab2.text = factorial(n).toString();
         }
+
 
         btnLab3.setOnClickListener{
             val suggestion = inputSuggestion.text.toString()
@@ -92,7 +99,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun showMessage(context: Context, title: String, message: String){ // базовый класс, который используется для вызова диалогового окна
+    private fun showMessage(context: Context, title: String, message: String){ // базовый класс, который используется для вызова диалогового окна
         val alertMessage = AlertDialog.Builder(context);
         alertMessage.setTitle(title)
         alertMessage.setMessage(message)
@@ -100,5 +107,16 @@ class MainActivity : AppCompatActivity() {
             dialog.dismiss()
         }
         alertMessage.show()
+    }
+
+    private fun factorial(n: Int): Long{
+        if (n < 0){
+            showMessage(this, "Сообщение","Число не должно быть отрицательным.")
+        }
+        var result = 1L;
+        for (i in 1..n){
+            result *= i
+        }
+        return result
     }
 }
