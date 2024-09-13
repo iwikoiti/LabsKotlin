@@ -44,21 +44,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+        app:layout_constraintTop_toBottomOf="@+id/inputSymbol2" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/inputSymbol2"
         android:layout_width="93dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="символ.."
         android:inputType="text"
-        android:text="символ.."
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/inputSymbol1" />
 
     <TextView
         android:id="@+id/textView5"
@@ -70,7 +70,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintTop_toBottomOf="@+id/inputSymbol1" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -118,8 +118,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Введите латинскую букву.."
         android:inputType="text"
-        android:text="Введите латинскую букву.."
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,8 +132,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Введите N.."
         android:inputType="number"
-        android:text="Введите N.."
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,8 +172,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Введите предложение.."
         android:inputType="text"
-        android:text="Введите предложение.."
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,14 +193,14 @@
         app:layout_constraintTop_toBottomOf="@+id/inputSuggestion" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/inputSymbol1"
         android:layout_width="93dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="символ.."
         android:inputType="text"
-        android:text="символ.."
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView4"
