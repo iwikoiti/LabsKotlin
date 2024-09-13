@@ -69,7 +69,17 @@ class MainActivity : AppCompatActivity() {
             } else{
                 return@setOnClickListener
             }
-            resultLab2.text = factorial(n).toString();
+
+            var count: Double = 0.0;
+            var i: Int = 1;
+            var j: Int = 0;
+            while (j < n) {
+                count += (1.0 / factorial(i))
+                i+=2
+                j++
+            }
+
+            resultLab2.text = count.toString();
         }
 
 
@@ -94,7 +104,12 @@ class MainActivity : AppCompatActivity() {
 
             val oldChar = symbol1[0]
             val newChar = symbol2[0]
+
+            if (suggestion.contains(oldChar)){
             resultLab3.text = suggestion.replace(oldChar,newChar).toString()
+            } else {
+                showMessage(this, "Ошибка!", "В предложении нет символа $oldChar.");
+            }
 
         }
     }
